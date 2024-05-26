@@ -1,0 +1,235 @@
+body {
+  background-color: rgb(254, 254, 254);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jua", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.content {
+  width: 715px;
+  height: 100vh;
+  background-color: rgb(252, 246, 247);
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+}
+
+aside {
+  background-color: white;
+  width: 200px;
+  padding: 20px;
+}
+
+aside nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside nav ul li a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+main h2 {
+  color: #333;
+}
+
+aside {
+  background-color: #f0f0f0;
+  width: 200px;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0; /* 추가 */
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 240px; /* aside 너비 + 여백 크기만큼 오른쪽으로 이동 */
+
+}
+
+table {
+
+  width: 1000px;
+  border-collapse: collapse;
+  margin-top: 50px;
+  margin-left: 90px;
+}
+
+th, td {
+  padding: 6px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #ffffff;
+  font-size: 17px;
+}
+td{
+font-size: 15px;
+}
+
+input[type="text"], select, input[type="date"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+}
+
+button {
+font-size: 11px;
+height: 25px;
+width: 67px;
+border-radius: 5px;
+/* padding: 0px 5px; */
+  background-color: #505050;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(107, 126, 189);
+}
+.delete-Button:hover{
+background-color: #771717;
+}
+.header {
+  display: flex;
+  justify-content:   space-between;
+  align-items: center;
+}
+.header button{
+border-radius: 10px;
+background-color:rgb(173, 172, 174);
+width: 100px;
+height: 28PX;
+}
+.category-plus{
+background-color: #581f1f;
+border: solid 1px black ;
+width: 170px;
+height:40px;
+margin-top: 30px;
+margin-left: 900px;
+
+}
+
+.detail-block {
+display: none; /* 초기에는 숨겨져 있음 */
+position: fixed; /* 화면 고정 위치 */
+top: 300px; /* 원하는 위치로 조정 */
+left: 50%; /* 가운데 정렬을 위해 사용 */
+transform: translateX(-50%); /* 가운데 정렬 */
+width: 500px; /* 원하는 너비로 조정 */
+padding: 20px; /* 내부 여백 */
+background-color:#e4dfef; /* 배경색 */
+border: 1px solid #271f39; /* 테두리 */
+border-radius: 5px; /* 모서리 둥글게 */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.detail-delete{
+display: flex;
+justify-content: flex-end;
+}
+.category{
+height: 30px;
+background-color: #fff8f8;
+}
+.menu{
+
+height: 70px;
+}
+.edit{
+width: 70px;
+}
+.select{
+width: 35px;
+}
+.display{
+width: 100px;
+}
+.menuPlus-button{
+margin-left: 10px;
+width: 40px;
+height: 22px;
+color: black;
+background-color: rgb(234, 234, 251);
+border:solid black 1px;
+}
+
+.categoryEdit-block,.categoryRegist-block{
+display: none; /* 초기에는 숨겨져 있음 */
+position: fixed; /* 화면 고정 위치 */
+top: 130px; /* 원하는 위치로 조정 */
+
+left: 50%; /* 가운데 정렬을 위해 사용 */
+transform: translateX(-50%); /* 가운데 정렬 */
+width: 600px; /* 원하는 너비로 조정 */
+padding: 10px; /* 내부 여백 */
+background-color:#faeded; /* 배경색 */
+border: 1px solid #271f39; /* 테두리 */
+border-radius: 5px; /* 모서리 둥글게 */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+margin-top: 100px;
+}
+.menuEdit-block,.menuPlus-block{
+  display: none; /* 초기에는 숨겨져 있음 */
+position: fixed; /* 화면 고정 위치 */
+background-color: rgb(227, 227, 227);
+width: 300px;
+
+left: 80%; 
+top: 150px;
+
+
+border-radius: 10px;
+
+
+}
+.menuEdit-naming{
+  margin-top: 0px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+/* 카테고리 추가시에 JSTL추가후 해야할것 */
+/* .plus-table{
+  display: none; 
+  width: 1000px;
+  border-collapse: collapse;
+  margin-top: 70px;
+  margin-left: 90px;
+} */
+
+.errorMsgCategoryName{
+  color: red;
+  font-size: 13px;
+}
+
+/* 메뉴변경 모달창의 삭제버튼만  */
+.menuEdit-block>div:nth-child(1) button:nth-child(1){
+ 
+  margin-left: 160px;
+
+}
+/* 메뉴변경 모달창의 삭제 추가 버튼 */
+.menuEdit-block>div:nth-child(1) button{
+  margin-top: 0px;
+  width: 50px;
+
+}
+.errorMsgMenu{
+  margin-top: 0px;
+  margin-left: 50px;
+  font-size: 13px;
+  color: red
+}
